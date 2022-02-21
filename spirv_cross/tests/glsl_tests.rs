@@ -84,7 +84,7 @@ fn ast_active_variables() {
     assert_eq!(active.len(), 5);
     let variables = HashSet::from(["a", "b", "c", "d", "v"]);
     for i in active {
-        let mut name = vert_ast.get_name(i).unwrap();
+        let name = vert_ast.get_name(i).unwrap();
         assert!(variables.contains(name.as_str()));
     }
 }
